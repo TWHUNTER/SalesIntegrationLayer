@@ -6,7 +6,7 @@ namespace IntegracionDesarrollo3.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("auth")]
     public class AuthController : ControllerBase
     {
 
