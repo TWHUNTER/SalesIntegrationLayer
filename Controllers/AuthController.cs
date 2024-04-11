@@ -1,12 +1,13 @@
 ﻿using IntegracionDesarrollo3.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace IntegracionDesarrollo3.Controllers
 {
 
     [ApiController]
-    [Route("auth")]
+    [Route("[controller]")]
     public class AuthController : ControllerBase
     {
 
@@ -84,9 +85,24 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
         [HttpPost("close")]
-        public async Task<JsonResult> Close()
+        public async Task<ActionResult> Close()
         {
-            return new JsonResult(new { });
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            var response = await _http.PostAsJsonAsync("close", new {});
+            if (response.IsSuccessStatusCode)
+            {
+                return new JsonResult(new
+                {
+                    Message = "Se ha cerrado su sesión",
+                });
+            }
+            else
+            {
+                return BadRequest(new {
+                    Message = "No has iniciado sesión"
+                });
+            }
         }
     }
 }

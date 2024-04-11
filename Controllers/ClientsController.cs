@@ -1,11 +1,16 @@
 ﻿using IntegracionDesarrollo3.Dtos;
+using IntegracionDesarrollo3.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using SalesIntegrationLayer.Dtos;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using static System.Net.WebRequestMethods;
 
 namespace IntegracionDesarrollo3.Controllers
 {
     [ApiController]
-    [Route("clients")]
+    [Route("[controller]")]
     public class ClientsController : Controller
     {
         private readonly IConfiguration _cfg;
@@ -17,7 +22,7 @@ namespace IntegracionDesarrollo3.Controllers
             public dynamic Message { get; set; }
             public int StatusCode { get; set; }
         }
-        
+
 
         public ClientsController(IConfiguration cfg, IHttpClientFactory factory)
         {
@@ -26,24 +31,23 @@ namespace IntegracionDesarrollo3.Controllers
             _http.BaseAddress = new Uri(cfg.GetValue<string>("CoreBaseUrl")! + RESOURCE);
         }
 
-
         [HttpPost("create")]
-        public async Task<JsonResult> CreateUser(LoginDTO dto)
+        public async Task<ActionResult> CreateClient(CreateClientDTO dto)
         {
-            var response = await _http.PostAsJsonAsync("users", dto);
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            var response = await _http.PostAsJsonAsync("create", dto);
             var content = await response.Content.ReadAsStringAsync();
 
-            
-            return new JsonResult(content);
-        }
-
-        [HttpGet("get")]
-        public async Task<JsonResult> GetAllUsers()
-        {
-            var response = await _http.GetAsync("users");
-            var content = await response.Content.ReadAsStringAsync();
-
-            return new JsonResult(content);
+            if (response.IsSuccessStatusCode)
+            {
+                var userCreated = JsonConvert.DeserializeObject<ClientModel>(content);
+                return new JsonResult(userCreated);
+            }
+            return BadRequest(new
+            {
+                Message = "Failed to create user. Try again"
+            });
         }
 
         [HttpGet("get/{id}")]
@@ -51,7 +55,6 @@ namespace IntegracionDesarrollo3.Controllers
         {
             var response = await _http.GetAsync($"users/{id}");
             var content = await response.Content.ReadAsStringAsync();
-
             return new JsonResult(content);
         }
 
