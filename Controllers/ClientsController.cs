@@ -51,11 +51,26 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
         [HttpGet("get/{id}")]
-        public async Task<JsonResult> GetUserById(string id)
+        public async Task<ActionResult<ClientModel>> GetClientById(string id)
         {
-            var response = await _http.GetAsync($"users/{id}");
-            var content = await response.Content.ReadAsStringAsync();
-            return new JsonResult(content);
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
+            var response = await _http.GetAsync($"{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var client = JsonConvert.DeserializeObject<ClientModel>(content);
+                return client;
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, new ErrorType
+                {
+                    Message = await response.Content.ReadAsStringAsync(),
+                    StatusCode = (int)response.StatusCode
+                });
+            }
         }
 
         [HttpPut("update")]
