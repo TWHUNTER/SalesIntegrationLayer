@@ -56,7 +56,7 @@ namespace IntegracionDesarrollo3.Controllers
             var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
             _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 
-            var response = await _http.GetAsync($"{id}");
+            var response = await _http.GetAsync($"get/{id}");
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
@@ -74,12 +74,24 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<JsonResult> UpdateUserById(string id, SignUpDTO dto)
+        public async Task<ActionResult> UpdateClient(string id, UpdateClientDTO dto)
         {
-            var response = await _http.PutAsJsonAsync($"users/{id}", dto);
-            var content = await response.Content.ReadAsStringAsync();
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");   
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 
-            return new JsonResult(content);
+            var response = await _http.PutAsJsonAsync($"update/{id}", dto);
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok();
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, new ErrorType
+                {
+                    Message = await response.Content.ReadAsStringAsync(),
+                    StatusCode = (int)response.StatusCode
+                });
+            }
         }
     }
 }
