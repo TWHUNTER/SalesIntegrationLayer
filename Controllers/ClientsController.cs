@@ -6,6 +6,7 @@ using SalesIntegrationLayer.Dtos;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using static System.Net.WebRequestMethods;
+using System.Text;
 
 namespace IntegracionDesarrollo3.Controllers
 {
@@ -50,6 +51,36 @@ namespace IntegracionDesarrollo3.Controllers
             });
         }
 
+        [HttpGet("get")]
+        public async Task<ActionResult<IEnumerable<ClientModel>>> GetClients()
+        {
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            if (string.IsNullOrEmpty(bearerToken))
+            {
+                return Unauthorized(new { Message = "Authorization token is missing." });
+            }
+
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
+            var response = await _http.GetAsync("get");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var clients = JsonConvert.DeserializeObject<IEnumerable<ClientModel>>(content);
+                return Ok(clients);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, new ErrorType
+                {
+                    Message = await response.Content.ReadAsStringAsync(),
+                    StatusCode = (int)response.StatusCode
+                });
+            }
+        }
+
+
         [HttpGet("get/{id}")]
         public async Task<ActionResult<ClientModel>> GetClientById(string id)
         {
@@ -74,24 +105,41 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdateClient(string id, UpdateClientDTO dto)
+        public async Task<ActionResult> UpdateClient([FromBody] UpdateClientDTO dto)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");   
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            if (string.IsNullOrEmpty(bearerToken))
+            {
+                return Unauthorized(new { Message = "Authorization token is missing." });
+            }
+
             _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 
-            var response = await _http.PutAsJsonAsync($"update/{id}", dto);
+            // Asegúrate de que los campos que estás enviando coincidan con los que espera el servidor.
+            var updateContent = new
+            {
+                client_fullname = dto.client_fullname,
+                email = dto.email,
+                phone_number = dto.phone_number // Este es el campo que se usa para identificar al cliente en la base de datos
+            };
+
+            var json = JsonConvert.SerializeObject(updateContent);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            // Envío de la solicitud PUT
+            var response = await _http.PutAsync("update", content);
+
             if (response.IsSuccessStatusCode)
             {
-                return Ok();
+                return Ok(new { Message = "Cliente actualizado exitosamente." });
             }
             else
             {
-                return StatusCode((int)response.StatusCode, new ErrorType
-                {
-                    Message = await response.Content.ReadAsStringAsync(),
-                    StatusCode = (int)response.StatusCode
-                });
+                var errorContent = await response.Content.ReadAsStringAsync();
+                return StatusCode((int)response.StatusCode, new { Message = errorContent, StatusCode = (int)response.StatusCode });
             }
         }
+
+
     }
 }

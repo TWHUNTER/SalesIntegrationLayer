@@ -8,7 +8,7 @@ namespace SalesIntegrationLayer.Dtos
         public string client_fullname { get; set; }
         [Required]
         [EmailAddress]
-        public string email{ get; set; }
+        public string email { get; set; }
         [Required]
         public string phone_number { get; set; }
     }
