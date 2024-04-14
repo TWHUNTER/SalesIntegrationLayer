@@ -69,7 +69,7 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
 
-        [HttpPost("create")]
+        /*[HttpPost("create")]
         public async Task<IActionResult> CreateProduct([FromBody] ProductsDTO dto)
         {
             var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
@@ -114,7 +114,7 @@ namespace IntegracionDesarrollo3.Controllers
 
             return StatusCode((int)response.StatusCode, new { Message = "Failed to delete the product." });
         }
-
+*/
 
 
     }
