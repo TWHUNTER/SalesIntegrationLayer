@@ -7,11 +7,11 @@ namespace IntegracionDesarrollo3.Models
     {
         public int ID { get; set; }
 
-        public int ClientId { get; set; }
-        public DateTime InvoiceDate { get; set; }
-        public decimal TotalAmount { get; set; }
-        public int PaymentMethodId { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public int client_id { get; set; }
+        public DateTime invoice_date { get; set; }
+        public decimal total_amount { get; set; }
+        public int payment_method_id { get; set; }
+        public DateTime created_at { get; set; }
+        public DateTime updated_at { get; set; }
     }
 }
