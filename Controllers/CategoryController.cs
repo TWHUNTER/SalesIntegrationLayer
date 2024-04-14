@@ -24,9 +24,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryDTO categoryDto)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-
+            Utils.RequestNeedsAuthentication(Request, _http);
             var json = JsonConvert.SerializeObject(categoryDto);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -109,14 +107,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("update")] // Aunque el método sea POST, se mantiene la ruta "update".
         public async Task<IActionResult> UpdateCategory([FromBody] UpdateCategoryDTO categoryDto)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-
-            if (string.IsNullOrEmpty(bearerToken))
-            {
-                return Unauthorized(new { Message = "Authorization token is missing." });
-            }
-
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            Utils.RequestNeedsAuthentication(Request, _http);
 
             var content = new
             {

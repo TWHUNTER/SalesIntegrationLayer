@@ -28,8 +28,8 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("create")]
         public async Task<ActionResult> CreateClient(CreateClientDTO dto)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            Utils.RequestNeedsAuthentication(Request, _http);
+
             var response = await _http.PostAsJsonAsync("create", dto);
             var content = await response.Content.ReadAsStringAsync();
 
@@ -47,13 +47,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpGet("get")]
         public async Task<ActionResult<IEnumerable<ClientModel>>> GetClients()
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            if (string.IsNullOrEmpty(bearerToken))
-            {
-                return Unauthorized(new { Message = "Authorization token is missing." });
-            }
-
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            Utils.RequestNeedsAuthentication(Request, _http);
 
             var response = await _http.GetAsync("get");
 
@@ -77,9 +71,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpGet("get/{id}")]
         public async Task<ActionResult<ClientModel>> GetClientById(string id)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-
+            Utils.RequestNeedsAuthentication(Request, _http);
             var response = await _http.GetAsync($"get/{id}");
             if (response.IsSuccessStatusCode)
             {

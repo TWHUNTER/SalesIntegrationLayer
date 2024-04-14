@@ -81,8 +81,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("close")]
         public async Task<ActionResult> Close()
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            Utils.RequestNeedsAuthentication(Request, _http);
             var response = await _http.PostAsJsonAsync("close", new {});
             if (response.IsSuccessStatusCode)
             {

@@ -103,8 +103,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+            Utils.RequestNeedsAuthentication(Request, _http);
             var response = await _http.DeleteAsync($"delete/{id}");
             if (response.IsSuccessStatusCode)
             {
