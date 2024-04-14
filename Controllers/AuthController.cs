@@ -15,12 +15,6 @@ namespace IntegracionDesarrollo3.Controllers
         private readonly HttpClient _http;
         private static readonly string RESOURCE = "auth/";
 
-        public class ErrorType
-        {
-            public dynamic Message { get; set; }
-            public int StatusCode { get; set; }
-        }
-
         public class AuthToken
         {
             public string AccessToken;
@@ -49,7 +43,7 @@ namespace IntegracionDesarrollo3.Controllers
             }
             try
             {
-                var error = JsonConvert.DeserializeObject<ErrorType>(content);
+                var error = JsonConvert.DeserializeObject<CoreApiError>(content);
                 return BadRequest(new
                 {
                     error!.Message,
@@ -76,7 +70,7 @@ namespace IntegracionDesarrollo3.Controllers
                     Message = "El usuario ha sido registrado satisfactoriamente."
                 });
             }
-            var error = JsonConvert.DeserializeObject<ErrorType>(content);
+            var error = JsonConvert.DeserializeObject<CoreApiError>(content);
             return BadRequest(new
             {
                 error!.Message,

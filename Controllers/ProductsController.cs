@@ -16,12 +16,6 @@ namespace IntegracionDesarrollo3.Controllers
         private readonly HttpClient _http;
         private static readonly string RESOURCE = "products/";
 
-        public class ErrorType
-        {
-            public dynamic Message { get; set; }
-            public int StatusCode { get; set; }
-        }
-
         public ProductsController(IConfiguration cfg, IHttpClientFactory factory)
         {
             _cfg = cfg;
@@ -69,25 +63,28 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
 
-        /*[HttpPost("create")]
-        public async Task<IActionResult> CreateProduct([FromBody] ProductsDTO dto)
-        {
-            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-            var response = await _http.PostAsJsonAsync("create", dto);
-            var content = await response.Content.ReadAsStringAsync();
+        //[HttpPost("create")]
+        //public async Task<IActionResult> CreateProduct([FromForm] ProductsDTO dto)
+        //{
+        //    var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+        //    _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+        //    var response = await _http.PostAsJsonAsync("create", dto);
+        //    var content = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine(content);
+        //    Console.WriteLine(content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var productCreated = JsonConvert.DeserializeObject<ClientModel>(content);
-                return new JsonResult(productCreated);
-            }
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        var productCreated = JsonConvert.DeserializeObject<ClientModel>(content);
+        //        return new JsonResult(productCreated);
+        //    }
 
-            return StatusCode((int)response.StatusCode, new { Message = "Failed to create the product." });
-        }
+        //    //return StatusCode((int)response.StatusCode, new { Message = "Failed to create the product." });
+        //    return StatusCode((int)response.StatusCode, new { Message = content});
+        //}
 
+
+        /*
         [HttpPut("update")]
         public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductDTO productDto)
         {
@@ -102,10 +99,12 @@ namespace IntegracionDesarrollo3.Controllers
 
             return StatusCode((int)response.StatusCode, new { Message = "Failed to update the product." });
         }
-
+*/
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
+            var bearerToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
             var response = await _http.DeleteAsync($"delete/{id}");
             if (response.IsSuccessStatusCode)
             {
@@ -114,8 +113,6 @@ namespace IntegracionDesarrollo3.Controllers
 
             return StatusCode((int)response.StatusCode, new { Message = "Failed to delete the product." });
         }
-*/
-
 
     }
 

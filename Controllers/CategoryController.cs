@@ -1,6 +1,4 @@
 ﻿using IntegracionDesarrollo3.Dtos;
-using IntegracionDesarrollo3.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;

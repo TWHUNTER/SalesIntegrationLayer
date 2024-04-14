@@ -18,13 +18,6 @@ namespace IntegracionDesarrollo3.Controllers
         private readonly HttpClient _http;
         private static readonly string RESOURCE = "clients/";
 
-        public class ErrorType
-        {
-            public dynamic Message { get; set; }
-            public int StatusCode { get; set; }
-        }
-
-
         public ClientsController(IConfiguration cfg, IHttpClientFactory factory)
         {
             _cfg = cfg;
@@ -72,7 +65,7 @@ namespace IntegracionDesarrollo3.Controllers
             }
             else
             {
-                return StatusCode((int)response.StatusCode, new ErrorType
+                return StatusCode((int)response.StatusCode, new CoreApiError
                 {
                     Message = await response.Content.ReadAsStringAsync(),
                     StatusCode = (int)response.StatusCode
@@ -96,7 +89,7 @@ namespace IntegracionDesarrollo3.Controllers
             }
             else
             {
-                return StatusCode((int)response.StatusCode, new ErrorType
+                return StatusCode((int)response.StatusCode, new CoreApiError
                 {
                     Message = await response.Content.ReadAsStringAsync(),
                     StatusCode = (int)response.StatusCode

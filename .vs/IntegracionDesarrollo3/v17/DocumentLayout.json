@@ -1,66 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\",
+  "WorkspaceRootPath": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\dtos\\invoicesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\invoicesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\models\\invoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\invoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\dtos\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\dtos\\clientsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\clientsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\luisd\\onedrive\\escritorio\\dev\\salesintegrationlayer\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integraciondesarrollo3\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,199 +38,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-14T17:19:41.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAIwGUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:11:34.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "Controllers\\InvoiceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:11:33.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "Controllers\\ClientsController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFsAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:08:39.416Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Invoices.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Invoices.cs",
-              "RelativeDocumentMoniker": "Models\\Invoices.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Invoices.cs",
-              "RelativeToolTip": "Models\\Invoices.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAgwAoAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T03:29:21.831Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InvoiceController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\InvoiceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InvoiceController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\InvoiceController.cs",
-              "RelativeToolTip": "Controllers\\InvoiceController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T03:30:23.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InvoicesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\InvoicesDTO.cs",
-              "RelativeDocumentMoniker": "Dtos\\InvoicesDTO.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\InvoicesDTO.cs",
-              "RelativeToolTip": "Dtos\\InvoicesDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T03:29:31.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAAAH8AAAAAAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAIwAEAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T01:17:11.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\CategoryDTO.cs",
-              "RelativeDocumentMoniker": "Dtos\\CategoryDTO.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\CategoryDTO.cs",
-              "RelativeToolTip": "Dtos\\CategoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T01:15:42.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T01:14:03.968Z",
+              "WhenOpened": "2024-04-14T17:10:49.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAowEkAAAAJAAAA",
+              "Title": "Error.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Error.cs",
+              "RelativeDocumentMoniker": "Error.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Error.cs",
+              "RelativeToolTip": "Error.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T15:24:29.945Z",
+              "WhenOpened": "2024-04-14T17:09:35.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClientsController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\ClientsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\ClientsController.cs",
-              "RelativeToolTip": "Controllers\\ClientsController.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAYwH0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T16:09:29.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\ProductsDTO.cs",
-              "RelativeDocumentMoniker": "Dtos\\ProductsDTO.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\ProductsDTO.cs",
-              "RelativeToolTip": "Dtos\\ProductsDTO.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T15:12:50.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Products.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Products.cs",
-              "RelativeDocumentMoniker": "Models\\Products.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Products.cs",
-              "RelativeToolTip": "Models\\Products.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T15:01:20.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClientsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\ClientsDTO.cs",
-              "RelativeDocumentMoniker": "Dtos\\ClientsDTO.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\ClientsDTO.cs",
-              "RelativeToolTip": "Dtos\\ClientsDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T21:35:10.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAIBJwEIAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T17:47:26.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\AuthDTOs.cs",
-              "RelativeDocumentMoniker": "Dtos\\AuthDTOs.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Dtos\\AuthDTOs.cs",
-              "RelativeToolTip": "Dtos\\AuthDTOs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T15:24:13.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T11:55:13.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Client.cs",
+              "DocumentMoniker": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Models\\Client.cs",
               "RelativeDocumentMoniker": "Models\\Client.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionDesarrollo3\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\luisd\\OneDrive\\Escritorio\\dev\\SalesIntegrationLayer\\Models\\Client.cs",
               "RelativeToolTip": "Models\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAIAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T17:47:24.329Z"
+              "WhenOpened": "2024-04-11T17:47:24.329Z",
+              "EditorCaption": ""
             }
           ]
         }
