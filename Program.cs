@@ -11,7 +11,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
-builder.Services.AddDbContext<AppDbContext>(opts => opts.UseSqlServer());
+
+var databaseSettings = builder.Configuration.GetConnectionString("MysqlIntegration")
+?? throw new Exception("Database connection string not found");
+builder.Services.AddDbContext<IntegrationDatabase>(options => options.UseMySQL(databaseSettings));
 
 var app = builder.Build();
 

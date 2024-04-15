@@ -1,5 +1,6 @@
 ﻿using IntegracionDesarrollo3.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
@@ -20,16 +21,20 @@ namespace IntegracionDesarrollo3.Controllers
             public string AccessToken;
         }
 
-        public AuthController(IConfiguration cfg, IHttpClientFactory factory)
+        private readonly IntegrationDatabase _integration;
+
+        public AuthController(IConfiguration cfg, IHttpClientFactory factory, IntegrationDatabase integration)
         {
             _cfg = cfg;
             _http = factory.CreateClient();
             _http.BaseAddress = new Uri(cfg.GetValue<string>("CoreBaseUrl")! + RESOURCE);
+            _integration = integration;
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO dto)
         {
+            var users = await _integration.Users.ToListAsync();
 
             var response = await _http.PostAsJsonAsync("login", dto);
             var content = await response.Content.ReadAsStringAsync();
@@ -38,7 +43,8 @@ namespace IntegracionDesarrollo3.Controllers
                 var token = JsonConvert.DeserializeObject<AuthToken>(content);
                 return new JsonResult(new
                 {
-                   token!.AccessToken
+                    token!.AccessToken,
+                    users
                 });
             }
             try
@@ -47,7 +53,8 @@ namespace IntegracionDesarrollo3.Controllers
                 return BadRequest(new
                 {
                     error!.Message,
-                    error.StatusCode
+                    error.StatusCode,
+                    users
                 });
             }
             catch (Exception ex)
@@ -82,7 +89,7 @@ namespace IntegracionDesarrollo3.Controllers
         public async Task<ActionResult> Close()
         {
             Utils.RequestNeedsAuthentication(Request, _http);
-            var response = await _http.PostAsJsonAsync("close", new {});
+            var response = await _http.PostAsJsonAsync("close", new { });
             if (response.IsSuccessStatusCode)
             {
                 return new JsonResult(new
@@ -92,7 +99,8 @@ namespace IntegracionDesarrollo3.Controllers
             }
             else
             {
-                return BadRequest(new {
+                return BadRequest(new
+                {
                     Message = "No has iniciado sesión"
                 });
             }
