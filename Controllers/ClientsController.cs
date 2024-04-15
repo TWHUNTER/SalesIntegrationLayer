@@ -81,11 +81,8 @@ namespace IntegracionDesarrollo3.Controllers
             }
             else
             {
-                return StatusCode((int)response.StatusCode, new CoreApiError
-                {
-                    Message = await response.Content.ReadAsStringAsync(),
-                    StatusCode = (int)response.StatusCode
-                });
+                var data = await dbContext.Clients.FirstOrDefaultAsync(c => c.Id == id);
+                return Ok(data);
             }
         }
 
