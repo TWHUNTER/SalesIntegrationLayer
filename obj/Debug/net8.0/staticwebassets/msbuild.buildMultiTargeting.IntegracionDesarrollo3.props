@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IntegracionDesarrollo3.props" />
+</Project>

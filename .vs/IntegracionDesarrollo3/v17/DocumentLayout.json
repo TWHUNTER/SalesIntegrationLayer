@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\models\\accountsreceivable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\accountsreceivable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\dtos\\accountreceivabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\accountreceivabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\dtos\\invoicesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\invoicesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\dtos\\clientsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:dtos\\clientsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\models\\invoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:models\\invoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|solutionrelative:error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3945BB6-0712-4E33-A38E-9E9FC5C1EA5D}|IntegracionDesarrollo3.csproj|c:\\users\\keven\\desktop\\trimestre7\\desarrollo3\\proyecto final\\integracionfinal\\salesintegrationlayer\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,21 +58,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "InvoiceController.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\InvoiceController.cs",
               "RelativeDocumentMoniker": "Controllers\\InvoiceController.cs",
               "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\InvoiceController.cs",
               "RelativeToolTip": "Controllers\\InvoiceController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBAAAAAwAAAA",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAAAJIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T17:11:33.061Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -72,59 +79,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\ClientsDTO.cs",
-              "RelativeDocumentMoniker": "Dtos\\ClientsDTO.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\ClientsDTO.cs",
-              "RelativeToolTip": "Dtos\\ClientsDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T16:26:58.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAAwGkAAAAMAAAA",
+              "Title": "AccountReceivableDTO.cs",
+              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\AccountReceivableDTO.cs",
+              "RelativeDocumentMoniker": "Dtos\\AccountReceivableDTO.cs",
+              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\AccountReceivableDTO.cs",
+              "RelativeToolTip": "Dtos\\AccountReceivableDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T17:11:34.59Z",
+              "WhenOpened": "2024-04-15T04:48:57.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountsReceivable.cs",
+              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Models\\AccountsReceivable.cs",
+              "RelativeDocumentMoniker": "Models\\AccountsReceivable.cs",
+              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Models\\AccountsReceivable.cs",
+              "RelativeToolTip": "Models\\AccountsReceivable.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAADwvwUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T03:52:20.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InvoicesDTO.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\InvoicesDTO.cs",
               "RelativeDocumentMoniker": "Dtos\\InvoicesDTO.cs",
               "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\InvoicesDTO.cs",
               "RelativeToolTip": "Dtos\\InvoicesDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAwwBcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T15:43:11.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T15:43:11.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAuwCsAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:11:34.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Invoices.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Models\\Invoices.cs",
               "RelativeDocumentMoniker": "Models\\Invoices.cs",
               "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Models\\Invoices.cs",
               "RelativeToolTip": "Models\\Invoices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T15:43:07.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T15:43:07.887Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ClientsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\ClientsDTO.cs",
+              "RelativeDocumentMoniker": "Dtos\\ClientsDTO.cs",
+              "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Dtos\\ClientsDTO.cs",
+              "RelativeToolTip": "Dtos\\ClientsDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T16:26:58.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Utils.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Utils.cs",
               "RelativeDocumentMoniker": "Utils.cs",
@@ -132,24 +160,23 @@
               "RelativeToolTip": "Utils.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T17:47:19.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T17:47:19.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ClientsController.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ClientsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
               "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\ClientsController.cs",
               "RelativeToolTip": "Controllers\\ClientsController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAADwv0kAAAA9AAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAUwEkAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T17:08:39.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
@@ -167,13 +194,13 @@
               "RelativeDocumentMoniker": "Error.cs",
               "ToolTip": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Error.cs",
               "RelativeToolTip": "Error.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T17:09:35.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\keven\\Desktop\\Trimestre7\\Desarrollo3\\Proyecto Final\\IntegracionFinal\\SalesIntegrationLayer\\Models\\Client.cs",
               "RelativeDocumentMoniker": "Models\\Client.cs",

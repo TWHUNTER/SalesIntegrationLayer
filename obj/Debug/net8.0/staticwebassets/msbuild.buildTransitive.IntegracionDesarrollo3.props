@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\IntegracionDesarrollo3.props" />
+</Project>

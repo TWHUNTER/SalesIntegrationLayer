@@ -26,6 +26,8 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpGet("get")]
         public async Task<IActionResult> GetProducts()
         {
+            Utils.RequestNeedsAuthentication(Request, _http);
+
             var response = await _http.GetAsync("get");
             if (response.IsSuccessStatusCode)
             {
@@ -39,6 +41,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
+            Utils.RequestNeedsAuthentication(Request, _http);
             var response = await _http.GetAsync($"get/{id}");
             if (response.IsSuccessStatusCode)
             {
@@ -52,6 +55,7 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpGet("filter/{category}")]
         public async Task<IActionResult> FilterProductsByCategory(string category)
         {
+            Utils.RequestNeedsAuthentication(Request, _http);
             var response = await _http.GetAsync($"filter/{category}");
             if (response.IsSuccessStatusCode)
             {
