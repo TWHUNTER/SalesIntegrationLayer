@@ -1,6 +1,11 @@
 ﻿namespace IntegracionDesarrollo3
 {
-    public class AppDbContext
+    using Microsoft.EntityFrameworkCore;
+
+    public class AppDbContext : DbContext
     {
-    }
+        public AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts)
+        {
+        }
+     }
 }
