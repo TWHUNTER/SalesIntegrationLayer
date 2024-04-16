@@ -67,19 +67,35 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(SignUpDTO dto)
         {
-            var result = _integration.Users.Add(new Models.UserModel
-            {
-                client_FullName = dto.full_name,
-                username = dto.username,
-                user_password = dto.user_password,
-                Email = dto.email,
-                PhoneNumber = dto.phone_number,
-                ProfileType = dto.profile_type,
-            }
-            );
+            
             var response = await _http.PostAsJsonAsync("register", dto);
             var content = await response.Content.ReadAsStringAsync();
 
+            var userExists = await _integration.Users
+                                       .AnyAsync(user => user.username == dto.username);
+
+            if (userExists)
+            {
+                var result = _integration.Users.Add(new Models.UserModel
+                {
+                    client_FullName = dto.full_name,
+                    username = dto.username,
+                    user_password = dto.user_password,
+                    Email = dto.email,
+                    PhoneNumber = dto.phone_number,
+                    ProfileType = dto.profile_type,
+                }
+                );
+
+                await _integration.SaveChangesAsync();
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Message = content
+                }) ;
+            }
 
             if (response.IsSuccessStatusCode)
             {
