@@ -1,6 +1,7 @@
 ﻿using IntegracionDesarrollo3.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
@@ -63,26 +64,42 @@ namespace IntegracionDesarrollo3.Controllers
             }
         }
 
-
         [HttpPost("register")]
         public async Task<IActionResult> Register(SignUpDTO dto)
         {
+            var result = _integration.Users.Add(new Models.UserModel
+            {
+                client_FullName = dto.full_name,
+                username = dto.username,
+                user_password = dto.user_password,
+                Email = dto.email,
+                PhoneNumber = dto.phone_number,
+                ProfileType = dto.profile_type,
+            }
+            );
             var response = await _http.PostAsJsonAsync("register", dto);
             var content = await response.Content.ReadAsStringAsync();
 
+
             if (response.IsSuccessStatusCode)
             {
+
                 return new JsonResult(new
                 {
                     Message = "El usuario ha sido registrado satisfactoriamente."
                 });
             }
-            var error = JsonConvert.DeserializeObject<CoreApiError>(content);
-            return BadRequest(new
+            else
             {
-                error!.Message,
-                error.StatusCode
-            });
+
+                var error = JsonConvert.DeserializeObject<CoreApiError>(content);
+                return BadRequest(new
+                {
+                    error!.Message,
+                    error.StatusCode
+                });
+            }
+
         }
 
         [HttpPost("close")]
