@@ -10,5 +10,6 @@
         }
 
         public DbSet<UserModel> Users { get; set; }
+        public DbSet<ClientModel> Clients { get; set; }
     }
 }

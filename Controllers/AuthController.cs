@@ -64,58 +64,63 @@ namespace IntegracionDesarrollo3.Controllers
             }
         }
 
+
+
         [HttpPost("register")]
         public async Task<IActionResult> Register(SignUpDTO dto)
         {
-            
-            var response = await _http.PostAsJsonAsync("register", dto);
-            var content = await response.Content.ReadAsStringAsync();
-
-                var result = _integration.Users.Add(new Models.UserModel
-                {
-                    client_FullName = dto.full_name,
-                    username = dto.username,
-                    user_password = dto.user_password,
-                    Email = dto.email,
-                    PhoneNumber = dto.phone_number,
-                    ProfileType = dto.profile_type,
-                }
-                );
-
-                await _integration.SaveChangesAsync();
-
-            var userExists = await _integration.Users
-                                       .AnyAsync(user => user.username == dto.username);
+            bool userExists = await _integration.Users
+                                                 .AnyAsync(user => user.username == dto.username);
 
             if (userExists)
             {
                 return BadRequest(new
                 {
-                    Message = content
-                }) ;
-                
-            }
-
-            if (response.IsSuccessStatusCode)
-            {
-
-                return new JsonResult(new
-                {
-                    Message = "El usuario ha sido registrado satisfactoriamente."
+                    Message = "Ese usuario ya exite, intente con otro nombre."
                 });
             }
-            else
-            {
 
+            var response = await _http.PostAsJsonAsync("register", dto);
+            if (!response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
                 var error = JsonConvert.DeserializeObject<CoreApiError>(content);
                 return BadRequest(new
                 {
-                    error!.Message,
+                    error.Message,
                     error.StatusCode
                 });
             }
 
+            var newUser = new Models.UserModel
+            {
+                client_FullName = dto.full_name,
+                username = dto.username,
+                user_password = dto.user_password,
+                Email = dto.email,
+                PhoneNumber = dto.phone_number,
+                ProfileType = dto.profile_type,
+                CreatedAt = DateTime.Now
+            };
+            _integration.Users.Add(newUser);
+
+            var newClient = new Models.ClientModel
+            {
+                client_fullname = dto.full_name,
+                email = dto.email,
+                phone_number = dto.phone_number,
+                createdAt = DateTime.Now
+            };
+            object value = _integration.Clients.Add(newClient);
+
+            await _integration.SaveChangesAsync();
+
+            return new JsonResult(new
+            {
+                Message = "El usuario ha sido registrado satisfactoriamente."
+            });
         }
+
 
         [HttpPost("close")]
         public async Task<ActionResult> Close()
