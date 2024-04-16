@@ -67,10 +67,9 @@ namespace IntegracionDesarrollo3.Controllers
 
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(SignUpDTO dto)
+        public async Task<IActionResult> Register([FromForm][FromBody]SignUpDTO dto)
         {
-            bool userExists = await _integration.Users
-                                                 .AnyAsync(user => user.username == dto.username);
+            bool userExists = await _integration.Users.AnyAsync(user => user.username == dto.username);
 
             if (userExists)
             {
