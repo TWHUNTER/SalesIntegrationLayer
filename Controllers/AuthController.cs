@@ -71,11 +71,6 @@ namespace IntegracionDesarrollo3.Controllers
             var response = await _http.PostAsJsonAsync("register", dto);
             var content = await response.Content.ReadAsStringAsync();
 
-            var userExists = await _integration.Users
-                                       .AnyAsync(user => user.username == dto.username);
-
-            if (userExists)
-            {
                 var result = _integration.Users.Add(new Models.UserModel
                 {
                     client_FullName = dto.full_name,
@@ -88,13 +83,17 @@ namespace IntegracionDesarrollo3.Controllers
                 );
 
                 await _integration.SaveChangesAsync();
-            }
-            else
+
+            var userExists = await _integration.Users
+                                       .AnyAsync(user => user.username == dto.username);
+
+            if (userExists)
             {
                 return BadRequest(new
                 {
                     Message = content
                 }) ;
+                
             }
 
             if (response.IsSuccessStatusCode)
