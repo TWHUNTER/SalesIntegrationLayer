@@ -34,4 +34,6 @@ namespace IntegracionDesarrollo3.Dtos
 
         public int? profile_type { get; set; }
     }
+
+
 }

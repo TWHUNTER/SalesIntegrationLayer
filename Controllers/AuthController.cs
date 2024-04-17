@@ -33,12 +33,12 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
 
-        [HttpPost("login")]
+        [HttpPost("login")] 
         public async Task<IActionResult> Login(LoginDTO dto)
         {
             bool isValidUser = await _integration.Users.AnyAsync(u => u.username == dto.username && u.user_password == dto.user_password);
             Utils.RequestNeedsAuthentication(Request, _http);
-            var response = await _http.PostAsJsonAsync("login", dto);
+            var response = await _http.PostAsJsonAsync("SingIn", dto);
             var content = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode || isValidUser)
             {
@@ -56,7 +56,7 @@ namespace IntegracionDesarrollo3.Controllers
             };
         }
 
-        
+
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(SignUpDTO dto)
@@ -100,6 +100,8 @@ namespace IntegracionDesarrollo3.Controllers
                 Message = "El usuario ha sido registrado satisfactoriamente."
             });
         }
+
+
 
 
         [HttpPost("close")]
