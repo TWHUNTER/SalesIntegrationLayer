@@ -51,38 +51,38 @@ namespace IntegracionDesarrollo3.Controllers
         [HttpPost("create")]
         public async Task<ActionResult> CreateClient(CreateClientDTO dto)
         {
-           
-                   bool clientExists = await _integration.Clients.AnyAsync(c => c.email == dto.email);
 
-                   if (clientExists)
-                   {
-                       return BadRequest(new
-                       {
-                           Message = "Ese usuario ya exite, intente con otro nombre."
-                       });
-                   }
+            bool clientExists = await _integration.Clients.AnyAsync(c => c.email == dto.email);
 
-                   var newClient = new Models.ClientModel
-                   {
-                       client_fullname = dto.client_fullname,
-                       email = dto.email,
-                       phone_number = dto.phone_number,
-                       createdAt = DateTime.Now
-                   };
-                   object value = _integration.Clients.Add(newClient);
+            if (clientExists)
+            {
+                return BadRequest(new
+                {
+                    Message = "Ese usuario ya exite, intente con otro nombre."
+                });
+            }
 
-                   await _integration.SaveChangesAsync();
+            var newClient = new Models.ClientModel
+            {
+                client_fullname = dto.client_fullname,
+                email = dto.email,
+                phone_number = dto.phone_number,
+                createdAt = DateTime.Now
+            };
+            object value = _integration.Clients.Add(newClient);
+
+            await _integration.SaveChangesAsync();
 
 
-                   Utils.RequestNeedsAuthentication(Request, _http);
+            Utils.RequestNeedsAuthentication(Request, _http);
 
                    var response = await _http.PostAsJsonAsync("create", dto);
                    var content = await response.Content.ReadAsStringAsync();
 
                    if (response.IsSuccessStatusCode)
                    {
-                       var userCreated = JsonConvert.DeserializeObject<ClientModel>(content);
-                       return new JsonResult(userCreated);
+                       var clientCreated = JsonConvert.DeserializeObject<ClientModel>(content);
+                       return new JsonResult(clientCreated);
                    }
                    return BadRequest(new
                    {
