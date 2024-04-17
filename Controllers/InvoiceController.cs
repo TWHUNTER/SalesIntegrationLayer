@@ -3,6 +3,8 @@ using IntegracionDesarrollo3.Dtos.IntegracionDesarrollo3.Dtos;
 using IntegracionDesarrollo3.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 
 namespace IntegracionDesarrollo3.Controllers
@@ -14,17 +16,42 @@ namespace IntegracionDesarrollo3.Controllers
     {
         private readonly IConfiguration _cfg;
         private readonly HttpClient _http;
-        public InvoiceController(IConfiguration cfg, IHttpClientFactory factory)
+        private readonly IntegrationDatabase _integration;
+        public InvoiceController(IConfiguration cfg, IHttpClientFactory factory,IntegrationDatabase integration)
         {
             _cfg = cfg;
             _http = factory.CreateClient();
             _http.BaseAddress = new Uri(_cfg.GetValue<string>("CoreBaseUrl") + "invoice/");
+            _integration = integration;
         }
 
 
         [HttpPost("create")]
         public async Task<IActionResult> CreateInvoice([FromBody] CreateInvoiceDTO invoiceDto)
         {
+            bool invoicesExists = await _integration.invoices.AnyAsync(invoices => invoices.client_id == invoiceDto.client_id);
+
+            if (invoicesExists)
+            {
+                return BadRequest(new
+                {
+                    Message = "Esa Categoria ya exite, intente con otro nombre."
+                });
+            }
+
+            var newInvoices = new Models.Invoices
+            {
+                client_id = invoiceDto.client_id,
+                invoice_date = invoiceDto.invoice_date,
+                total_amount = invoiceDto.total_amount,
+                payment_method_id = invoiceDto.payment_method_id,
+                updated_at = invoiceDto.updated_at
+
+            };
+            _integration.invoices.Add(newInvoices);
+
+            await _integration.SaveChangesAsync();
+
             Utils.RequestNeedsAuthentication(Request, _http);
 
             var response = await _http.PostAsJsonAsync("create", invoiceDto);

@@ -1,32 +1,29 @@
-﻿using IntegracionDesarrollo3;
-using IntegracionDesarrollo3.Dtos;
+﻿using IntegracionDesarrollo3.Dtos;
 using IntegracionDesarrollo3.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using Microsoft.VisualBasic;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using Org.BouncyCastle.Utilities;
-using SalesIntegrationLayer.Dtos;
-using System.Net.Http.Headers;
 using System.Text;
 using static IntegracionDesarrollo3.Dtos.ServicesDTO;
 
 namespace IntegracionDesarrollo3.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ServicesController : ControllerBase
     {
         private readonly IConfiguration _cfg;
         private readonly HttpClient _http;
         private static readonly string RESOURCE = "services/";
+        private readonly IntegrationDatabase _integration;
 
-        public ServicesController(IConfiguration cfg, IHttpClientFactory factory)
+        public ServicesController(IConfiguration cfg, IHttpClientFactory factory, IntegrationDatabase integration)
         {
             _cfg = cfg;
             _http = factory.CreateClient();
             _http.BaseAddress = new Uri(cfg.GetValue<string>("CoreBaseUrl")! + RESOURCE);
+            _integration = integration;
         }
 
         [HttpGet("get")]
@@ -66,22 +63,46 @@ namespace IntegracionDesarrollo3.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult> CreateServices(CreateServicesDto dto)
+        public async Task<IActionResult> CreateServices(CreateServicesDto dto)
         {
+
+            bool servicesExists = await _integration.services.AnyAsync(services => services.service_name == dto.service_name);
+
+            if (servicesExists)
+            {
+                return BadRequest(new
+                {
+                    Message = "Ese Servicio ya exite, intente con otro nombre."
+                });
+            }
+
+            var newServices = new Models.ServicesModel
+            {
+                service_name = dto.service_name,
+                services_description = dto.services_description,
+                price = dto.price,
+                isVisible = dto.isVisible,
+                CreatedAt = dto.CreatedAt,
+                UpdatedAt = dto.UpdatedAt
+            };
+            _integration.services.Add(newServices);
+
+            await _integration.SaveChangesAsync();
+
             Utils.RequestNeedsAuthentication(Request, _http);
 
-            var response = await _http.PostAsJsonAsync("create", dto);
-            var content = await response.Content.ReadAsStringAsync();
+            var json = JsonConvert.SerializeObject(dto);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
 
+            var response = await _http.PostAsync("create", content);
             if (response.IsSuccessStatusCode)
             {
-                var servicesCreated = JsonConvert.DeserializeObject<ServicesModel>(content);
-                return new JsonResult(servicesCreated);
+                var createdServicesJson = await response.Content.ReadAsStringAsync();
+                var createdServices = JsonConvert.DeserializeObject<CreateServicesDto>(createdServicesJson);
+                return new JsonResult(createdServices);
             }
-            return BadRequest(new
-            {
-                Message = "Failed to create services. Try again"
-            });
+
+            return StatusCode((int)response.StatusCode, new { Message = "Failed to create the services." });
         }
 
         [HttpPut("update")]
@@ -93,7 +114,7 @@ namespace IntegracionDesarrollo3.Controllers
             var updateContent = new
             {
                 service_name = dto.service_name,
-                service_description = dto.service_description,
+                service_description = dto.services_description,
                 price = dto.price,
                 isVisible = dto.isVisible
             };
@@ -138,7 +159,7 @@ namespace IntegracionDesarrollo3.Controllers
                 });
             }
         }
-       
+
 
     }
 }

@@ -7,5 +7,7 @@ namespace SalesIntegrationLayer.Dtos
         [Required]
         public string profile_role { get; set; }
         public string role_description { get; set; }
+
+
     }
 }

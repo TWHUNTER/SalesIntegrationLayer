@@ -5,11 +5,11 @@
 
         public int Id { get; set; }
         public string service_name { get; set; }
-        public string service_description { get; set; }
+        public string services_description { get; set; }
         public decimal price { get; set; }
-        public bool isVisible { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public bool? isVisible { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
     }
 }

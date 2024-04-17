@@ -1,5 +1,6 @@
 ﻿using IntegracionDesarrollo3.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
@@ -13,18 +14,41 @@ namespace IntegracionDesarrollo3.Controllers
         private readonly IConfiguration _cfg;
         private readonly HttpClient _http;
         private static readonly string RESOURCE = "category/";
+        private readonly IntegrationDatabase _integration;
 
-        public CategoryController(IConfiguration cfg, IHttpClientFactory factory)
+        public CategoryController(IConfiguration cfg, IHttpClientFactory factory, IntegrationDatabase integration)
         {
             _cfg = cfg;
             _http = factory.CreateClient();
             _http.BaseAddress = new Uri(cfg.GetValue<string>("CoreBaseUrl")! + RESOURCE);
+            _integration = integration;
         }
 
         [HttpPost("create")]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryDTO categoryDto)
         {
+
+            bool categoryExists = await _integration.products_category.AnyAsync(category => category.category_name == categoryDto.category_name);
+
+            if (categoryExists)
+            {
+                return BadRequest(new
+                {
+                    Message = "Esa Categoria ya exite, intente con otro nombre."
+                });
+            }
+
+            var newCategory = new Models.Category
+            {
+                category_name = categoryDto.category_name
+            };
+            _integration.products_category.Add(newCategory);
+
+            await _integration.SaveChangesAsync();
+
+
             Utils.RequestNeedsAuthentication(Request, _http);
+
             var json = JsonConvert.SerializeObject(categoryDto);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
