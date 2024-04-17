@@ -32,8 +32,8 @@ namespace IntegracionDesarrollo3.Controllers
             _integration = integration;
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDTO dto)
+        /*[HttpPost("login")]
+        public async Task<IActionResult> Login([FromForm][FromBody] LoginDTO dto)
         {
             var users = await _integration.Users.ToListAsync();
 
@@ -62,12 +62,64 @@ namespace IntegracionDesarrollo3.Controllers
             {
                 return BadRequest("Something went very wrong: " + ex.Message);
             }
+        }*/
+        /*[HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDTO dto)
+        {
+            //var users = await _integration.Users.ToListAsync();
+
+            var response = await _http.PostAsJsonAsync("login", dto);
+            var content = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                var token = JsonConvert.DeserializeObject<AuthToken>(content);
+                return new JsonResult(new
+                {
+                    token!.AccessToken,
+                    //users
+                });
+            }
+            try
+            {
+                var error = JsonConvert.DeserializeObject<CoreApiError>(content);
+                return BadRequest(new
+                {
+                    error!.Message,
+                    error.StatusCode,
+                    //users
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Something went very wrong: " + ex.Message);
+            }
+        }*/
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDTO dto)
+        {
+            bool isValidUser = await _integration.Users.AnyAsync(u => u.username == dto.username && u.user_password == dto.user_password);
+            Utils.RequestNeedsAuthentication(Request, _http);
+            var response = await _http.PostAsJsonAsync("login", dto);
+            var content = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode||isValidUser)
+            {
+                return new JsonResult(new
+                {
+                    Message = "Ha ingresado correctamente",
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Message = content
+                });
+            };
         }
 
-
-
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromForm][FromBody]SignUpDTO dto)
+        public async Task<IActionResult> Register(SignUpDTO dto)
         {
             bool userExists = await _integration.Users.AnyAsync(user => user.username == dto.username);
 
@@ -79,17 +131,6 @@ namespace IntegracionDesarrollo3.Controllers
                 });
             }
 
-            var response = await _http.PostAsJsonAsync("register", dto);
-            if (!response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var error = JsonConvert.DeserializeObject<CoreApiError>(content);
-                return BadRequest(new
-                {
-                    error.Message,
-                    error.StatusCode
-                });
-            }
 
             var newUser = new Models.UserModel
             {
