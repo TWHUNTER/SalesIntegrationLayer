@@ -17,7 +17,7 @@ namespace IntegracionDesarrollo3.Models
         [Column("phone_number")]
         public string PhoneNumber { get; set; }
         [Column("profile_type")]
-        public int ProfileType { get; set; }
+        public int? ProfileType { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
     }
