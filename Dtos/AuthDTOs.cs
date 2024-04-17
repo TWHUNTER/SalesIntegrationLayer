@@ -32,6 +32,6 @@ namespace IntegracionDesarrollo3.Dtos
         [Required]
         public string phone_number { get; set; }
 
-        public int profile_type { get; set; }
+        public int? profile_type { get; set; }
     }
 }
