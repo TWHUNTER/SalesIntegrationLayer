@@ -91,7 +91,7 @@ namespace IntegracionDesarrollo3.Controllers
 
         }
 
-        [HttpGet("get")]
+        /*[HttpGet("get")]
         public async Task<ActionResult<IEnumerable<ClientModel>>> GetClients()
         {
             Utils.RequestNeedsAuthentication(Request, _http);
@@ -112,8 +112,30 @@ namespace IntegracionDesarrollo3.Controllers
                     StatusCode = (int)response.StatusCode
                 });
             }
-        }
+        }*/
 
+
+        [HttpGet("get")]
+        public async Task<ActionResult<IEnumerable<ClientModel>>> GetClients()
+        {
+            Utils.RequestNeedsAuthentication(Request, _http);
+
+            var response = await _http.GetAsync("get");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var user = await _integration.Clients.ToListAsync();
+                return Ok(user);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, new CoreApiError
+                {
+                    Message = await response.Content.ReadAsStringAsync(),
+                    StatusCode = (int)response.StatusCode
+                });
+            }
+        }
 
         [HttpGet("get/{id}")]
         public async Task<ActionResult<ClientModel>> GetClientById(string id)

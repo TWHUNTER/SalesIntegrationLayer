@@ -67,6 +67,7 @@ namespace IntegracionDesarrollo3.Controllers
         public async Task<IActionResult> GetCategories()
         {
             var response = await _http.GetAsync("get");
+
             if (response.IsSuccessStatusCode)
             {
                 var categoriesJson = await response.Content.ReadAsStringAsync();
@@ -75,6 +76,8 @@ namespace IntegracionDesarrollo3.Controllers
             }
             return StatusCode((int)response.StatusCode, new { Message = "Failed to get categories." });
         }
+
+
 
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetCategoryById(int id)
